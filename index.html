@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form Database</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Employee Registration Form</h1>
+    <form id="registrationForm" action="db.php" method="POST">
+
+      <!--Full Name-->
+      <div class="first">
+        <!--First Name-->
+        <div class="name-group">
+          <h3>Full Name</h3>
+          <input type="text" id="firstName" name="firstname" required>
+          <label for="firstName">First Name</label>
+        </div>
+  
+        <!--Last Name-->
+        <div class="name-group">
+          <h3> .</h3>
+          <input type="text" id="lastName" name="lastname" required>
+          <label for="lastName">Last Name</label>
+        </div>
+        
+        <!--Date of Birth-->
+        <div id="dateofbirth">
+          <h3>Date of Birth</h3>
+          <input type="date" name="dob" required>
+          <label for="dob">Date</label>
+        </div>
+      </div>
+  
+      <div class="second">
+        <!--Email-->
+        <div id="email">
+          <h3>Email</h3>
+          <input type="email" name="mail" required>
+          <label for="email">example@example.com</label>
+        </div>
+
+        <!--Phone Number-->
+        <div id="phoneNumber">
+          <h3>Phone Number</h3>
+          <input type="tel" name="phoneNumber" placeholder="(000) 000-0000" required>
+          <label for="phoneNumber">Please enter a valid phone number.</label>
+        </div>
+
+
+        <!--Password-->
+        <div id="password">
+          <h3>Password</h3>
+          <input type="password" name="password" required>
+          <label for="password">Password</label>
+        </div>
+      </div>
+  
+      <div class="third">
+        <!--Address-->
+        <h3>Address</h3>
+        <div class="cityProvince">
+          <select id="province" name="province" required>
+            <option value="" disabled selected>Select Province</option>
+            <option value="bataan">Bataan</option>
+            <option value="pampanga">Pampanga</option>
+          </select>
+          <select id="city" name="city" required>
+            <option value="" disabled selected>Select City/ Municipality</option>
+          </select>
+        </div>
+
+        <div id="streetAddress">
+          <input type="text" name="streetAddress" required>
+          <label for="address">Street Address</label>
+        </div>
+  
+        <div id="streetAddress2">
+          <input type="text" name="streetAddress2" required>
+          <label for="address">Street Address Line 2</label>
+        </div>
+  
+        <div id="zipcode">
+          <input type="text" name="zipcode" required>
+          <label for="address">Postal / Zip Code</label>
+        </div>
+      </div>
+  
+      <!--Applying Position-->
+      <div id="applyingPosition">
+        <h3>Applying Position</h3>
+        <input type="text" name="applyingPosition" required>
+      </div>
+  
+      <!--Resume-->
+      <div id="resume">
+        <h3>Please Upload Resume</h3>
+        <input type="file" name="resume" accept="image/*" required>
+      </div>
+  
+      <!--Type of Work & Gender-->
+      <div class="fourth">
+        <!--Type of Work-->
+        <div id="typeofWork">
+          <h3>Type of Work</h3>
+          <label>
+            <input type="radio" name="workType" value="Permanent" required>
+            Permanent
+          </label>
+          <label>
+            <input type="radio" name="workType" value="Both">
+            Both
+          </label>
+          <label>
+            <input type="radio" name="workType" value="Other">
+            Other
+          </label>
+          <label>
+            <input type="radio" name="workType" value="Temporary">
+            Temporary
+          </label>
+        </div>
+
+        <!--Gender-->
+        <div id="gender">
+          <h3>Gender</h3>
+          <label>
+            <input type="radio" name="gender" value="female" required>
+            Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="TransFemale">
+            Transgender Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Other">
+            Not Listed
+          </label>
+          <label>
+            <input type="radio" name="gender" value="male">
+            Male
+          </label>
+          <input type="radio" name="gender" value="TranMale">
+          Transgender Male
+        </label>           
+        </div> 
+    </div>
+
+      <!--Additional Info-->
+      <div id="additionalInfo">
+        <h3>Cover Letter or Additional Information</h3>
+        <textarea name="additionalInfo" rows="25" cols="50" placeholder="Type here..."></textarea>
+      </div>
+      
+      <!--Terms and Conditions-->
+      <br>
+      <label for="termsandconditions">    
+      <input type="checkbox" id="checkbox" name="checkbox" value="termsandconditions" required>
+       By clicking here, I state that I have read and understood the terms and conditions.</label><br>
+
+      <!--Submit-->
+      <div id="submit">
+        <input type="submit" value="Submit">
+      </div>
+
+      <p id="login">Already have an account? <a href="login.php">Login here.</a></p>
+    </form>
+  </div> 
+  <script src="script.js"></script>
+</body>
+</html>
